@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="sq">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gjimnazi “Ali Demi” | Vlorë</title>
@@ -123,13 +126,6 @@ nav a:hover{
     background:var(--gold);
     font-size:16px;
     font-weight:700;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.hero-btn:hover{
-    background:white;
-    transform:translateY(-4px);
 }
 
 /* SECTIONS */
@@ -240,6 +236,7 @@ nav ul{
 }
 
 </style>
+
 </head>
 
 <body>
@@ -279,7 +276,7 @@ Gjimnazi “Ali Demi”
 Traditë, kulturë dhe ekselencë akademike që prej vitit 1947.
 </p>
 
-<button class="hero-btn" onclick="welcome()">
+<button class="hero-btn">
 Mirësevini
 </button>
 
@@ -556,16 +553,6 @@ Të gjitha të drejtat e rezervuara
 </p>
 
 </footer>
-
-<script>
-
-function welcome(){
-
-alert("Mirësevini në faqen zyrtare të Gjimnazit “Ali Demi”!");
-
-}
-
-</script>
 
 </body>
 </html>
