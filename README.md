@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gjimnazi “Ali Demi” | Vlorë</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -15,10 +14,9 @@
     --primary:#0b1f3a;
     --secondary:#123c73;
     --gold:#f5c542;
-    --light:#f5f7fb;
     --white:#ffffff;
+    --light:#f4f7fb;
     --text:#2c2c2c;
-    --shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 *{
@@ -29,23 +27,21 @@
 }
 
 body{
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
     background:var(--light);
     color:var(--text);
-    overflow-x:hidden;
 }
 
 /* NAVBAR */
 
 header{
-    width:100%;
     position:fixed;
+    width:100%;
     top:0;
     left:0;
-    z-index:999;
     background:rgba(11,31,58,0.95);
     backdrop-filter:blur(10px);
-    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+    z-index:999;
 }
 
 nav{
@@ -54,89 +50,82 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 0;
+    padding:15px 0;
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
     color:white;
-    font-size:28px;
+    font-size:24px;
     font-weight:700;
-    letter-spacing:1px;
 }
 
-.logo span{
-    color:var(--gold);
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
 }
 
 nav ul{
     display:flex;
     list-style:none;
-    gap:28px;
+    gap:25px;
 }
 
 nav a{
-    text-decoration:none;
     color:white;
+    text-decoration:none;
     font-weight:500;
     transition:0.3s;
-    position:relative;
 }
 
-nav a::after{
-    content:'';
-    position:absolute;
-    width:0%;
-    height:2px;
-    left:0;
-    bottom:-5px;
-    background:var(--gold);
-    transition:0.3s;
-}
-
-nav a:hover::after{
-    width:100%;
+nav a:hover{
+    color:var(--gold);
 }
 
 /* HERO */
 
 .hero{
     height:100vh;
+
     background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600')
-    center/cover no-repeat;
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0004.jpg');
+
+    background-size:cover;
+    background-position:center;
 
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
+    color:white;
     padding:20px;
 }
 
 .hero-content{
     max-width:900px;
-    color:white;
-    animation:fadeIn 1.5s ease;
 }
 
 .hero-content h1{
-    font-size:72px;
+    font-size:70px;
     margin-bottom:20px;
     font-weight:800;
 }
 
 .hero-content p{
     font-size:24px;
-    line-height:1.7;
-    margin-bottom:35px;
+    line-height:1.8;
 }
 
 .hero-btn{
+    margin-top:35px;
     padding:16px 38px;
     border:none;
     border-radius:50px;
     background:var(--gold);
-    color:black;
     font-size:16px;
     font-weight:700;
     cursor:pointer;
@@ -144,35 +133,34 @@ nav a:hover::after{
 }
 
 .hero-btn:hover{
-    transform:translateY(-4px);
     background:white;
+    transform:translateY(-4px);
 }
 
-/* GENERAL */
+/* SECTIONS */
 
 section{
-    padding:110px 10%;
+    padding:100px 10%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:50px;
 }
 
 .section-title h2{
     font-size:42px;
     color:var(--primary);
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 .section-title p{
     color:#666;
-    font-size:17px;
 }
 
-/* INFO */
+/* CARDS */
 
-.info-grid{
+.grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:30px;
@@ -180,111 +168,33 @@ section{
 
 .card{
     background:white;
+    padding:30px;
     border-radius:20px;
-    padding:35px;
-    box-shadow:var(--shadow);
-    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 }
 
 .card h3{
     color:var(--secondary);
     margin-bottom:15px;
-    font-size:24px;
 }
 
-.card p{
-    line-height:1.9;
-    color:#555;
-}
+/* HISTORY */
 
-/* TIMELINE */
-
-.timeline{
-    position:relative;
-    max-width:1000px;
-    margin:auto;
-}
-
-.timeline::after{
-    content:'';
-    position:absolute;
-    width:4px;
-    background:var(--gold);
-    top:0;
-    bottom:0;
-    left:50%;
-    margin-left:-2px;
-}
-
-.timeline-item{
-    padding:10px 40px;
-    position:relative;
-    width:50%;
-}
-
-.timeline-item::after{
-    content:'';
-    position:absolute;
-    width:22px;
-    height:22px;
-    right:-11px;
-    background:var(--secondary);
-    border:4px solid var(--gold);
-    top:20px;
-    border-radius:50%;
-    z-index:1;
-}
-
-.left{
-    left:0;
-}
-
-.right{
-    left:50%;
-}
-
-.right::after{
-    left:-11px;
-}
-
-.timeline-content{
+.history{
     background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:var(--shadow);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-.timeline-content h3{
-    color:var(--secondary);
-    margin-bottom:10px;
-}
-
-/* STATS */
-
-.stats{
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:white;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
-    text-align:center;
-}
-
-.stat-box h2{
-    font-size:55px;
-    color:var(--gold);
-}
-
-.stat-box p{
-    margin-top:10px;
-    font-size:18px;
+.history p{
+    margin-bottom:20px;
+    line-height:1.9;
 }
 
 /* GALLERY */
@@ -301,29 +211,25 @@ section{
     object-fit:cover;
     border-radius:20px;
     transition:0.4s;
-    box-shadow:var(--shadow);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 .gallery img:hover{
-    transform:scale(1.03);
+    transform:scale(1.04);
 }
 
 /* CONTACT */
 
-.contact-box{
+.contact{
     background:white;
-    border-radius:20px;
     padding:50px;
-    box-shadow:var(--shadow);
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-.contact-item{
-    margin-bottom:25px;
-}
-
-.contact-item h3{
-    color:var(--secondary);
-    margin-bottom:10px;
+.contact p{
+    margin-bottom:20px;
+    font-size:18px;
 }
 
 /* FOOTER */
@@ -332,36 +238,13 @@ footer{
     background:var(--primary);
     color:white;
     text-align:center;
-    padding:35px;
-    margin-top:50px;
+    padding:30px;
 }
-
-footer p{
-    opacity:0.9;
-}
-
-/* ANIMATION */
-
-@keyframes fadeIn{
-
-from{
-    opacity:0;
-    transform:translateY(30px);
-}
-
-to{
-    opacity:1;
-    transform:translateY(0);
-}
-
-}
-
-/* MOBILE */
 
 @media(max-width:900px){
 
 .hero-content h1{
-    font-size:48px;
+    font-size:45px;
 }
 
 .hero-content p{
@@ -378,24 +261,6 @@ nav ul{
     justify-content:center;
 }
 
-.timeline::after{
-    left:31px;
-}
-
-.timeline-item{
-    width:100%;
-    padding-left:70px;
-    padding-right:25px;
-}
-
-.timeline-item::after{
-    left:20px;
-}
-
-.right{
-    left:0%;
-}
-
 }
 
 </style>
@@ -408,7 +273,11 @@ nav ul{
 <nav>
 
 <div class="logo">
-Ali <span>Demi</span>
+
+<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/logo.png">
+
+<div>Gjimnazi “Ali Demi”</div>
+
 </div>
 
 <ul>
@@ -434,8 +303,7 @@ Ali <span>Demi</span>
 <h1>Gjimnazi “Ali Demi”</h1>
 
 <p>
-Një traditë ekselence që prej vitit 1947 —
-arsim cilësor, kulturë dhe përgatitje për të ardhmen.
+Traditë, kulturë dhe ekselencë akademike që prej vitit 1947.
 </p>
 
 <button class="hero-btn" onclick="welcome()">
@@ -452,82 +320,38 @@ Mirësevini
 
 <div class="section-title">
 <h2>Historiku</h2>
-<p>Rruga e suksesit ndër vite</p>
+<p>Historia dhe tradita e shkollës</p>
 </div>
 
-<div class="timeline">
+<div class="history">
 
-<div class="timeline-item left">
-<div class="timeline-content">
-<h3>1947</h3>
 <p>
-Shkolla u themelua më 20 Tetor 1947
-si shkolla e parë e mesme e pasçlirimit
-në Vlorë.
+Gjimnazi “Ali Demi” u themelua më 20 Tetor 1947
+në qytetin e Vlorës dhe konsiderohet një nga
+gjimnazet më të njohura në Shqipëri.
 </p>
-</div>
-</div>
 
-<div class="timeline-item right">
-<div class="timeline-content">
-<h3>Vitet e para</h3>
+<p>
+Ishte shkolla e parë e mesme e pasçlirimit
+që mbulonte rrethet Vlorë dhe Fier.
+</p>
+
 <p>
 Drejtori i parë ishte Koço Papaproko
-dhe shkolla kishte 42 nxënës.
+dhe shkolla fillimisht kishte 42 nxënës.
 </p>
-</div>
-</div>
 
-<div class="timeline-item left">
-<div class="timeline-content">
-<h3>Zhvillimi</h3>
 <p>
-U krijuan laboratorë modernë,
-biblioteka dhe aktivitete kulturore.
+Me kalimin e viteve u krijuan laboratorë,
+bibliotekë moderne, aktivitete sportive,
+kulturore dhe projekte ndërkombëtare.
 </p>
-</div>
-</div>
 
-<div class="timeline-item right">
-<div class="timeline-content">
-<h3>UNESCO</h3>
 <p>
-Shkolla u bë pjesë e UNESCO-s
-duke përfaqësuar Shqipërinë në projekte
-ndërkombëtare.
+Sot Gjimnazi “Ali Demi” vazhdon të jetë
+një institucion i rëndësishëm arsimor
+me rezultate të larta akademike.
 </p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stats-grid">
-
-<div class="stat-box">
-<h2>1947</h2>
-<p>Viti i themelimit</p>
-</div>
-
-<div class="stat-box">
-<h2>75+</h2>
-<p>Vite traditë</p>
-</div>
-
-<div class="stat-box">
-<h2>1000+</h2>
-<p>Nxënës të diplomuar</p>
-</div>
-
-<div class="stat-box">
-<h2>50+</h2>
-<p>Aktivitete edukative</p>
-</div>
 
 </div>
 
@@ -539,32 +363,32 @@ ndërkombëtare.
 
 <div class="section-title">
 <h2>Synimi i Shkollës</h2>
-<p>Edukimi për të ardhmen</p>
+<p>Misioni dhe vizioni</p>
 </div>
 
-<div class="info-grid">
+<div class="grid">
 
 <div class="card">
 <h3>Ekselencë Akademike</h3>
 <p>
-Shkolla synon rezultate të larta akademike
-dhe përgatitje universitare profesionale.
+Përgatitja e nxënësve me rezultate të larta
+dhe edukim modern.
 </p>
 </div>
 
 <div class="card">
 <h3>Zhvillim Personal</h3>
 <p>
-Nxënësit zhvillojnë kreativitetin,
-talentin dhe aftësitë sociale.
+Nxitja e talentit, kreativitetit dhe
+aftësive profesionale.
 </p>
 </div>
 
 <div class="card">
-<h3>Qytetari Aktive</h3>
+<h3>Edukimi Qytetar</h3>
 <p>
-Edukimi qytetar dhe përgjegjësia sociale
-janë pjesë thelbësore e shkollës.
+Formimi i qytetarëve të përgjegjshëm
+dhe aktivë në shoqëri.
 </p>
 </div>
 
@@ -581,7 +405,7 @@ janë pjesë thelbësore e shkollës.
 <p>Stafi drejtues i shkollës</p>
 </div>
 
-<div class="info-grid">
+<div class="grid">
 
 <div class="card">
 <h3>Drejtori</h3>
@@ -613,10 +437,10 @@ janë pjesë thelbësore e shkollës.
 
 <div class="section-title">
 <h2>Aktivitetet</h2>
-<p>Jetë aktive shkollore</p>
+<p>Aktivitete edukative dhe kulturore</p>
 </div>
 
-<div class="info-grid">
+<div class="grid">
 
 <div class="card">
 <h3>Olimpiada</h3>
@@ -627,26 +451,23 @@ dhe ndërkombëtare.
 </div>
 
 <div class="card">
-<h3>Sport</h3>
+<h3>Aktivitete Kulturore</h3>
 <p>
-Aktivitete sportive dhe kampionate
-mes shkollave.
+Koncerte, konkurse dhe evente artistike.
 </p>
 </div>
 
 <div class="card">
-<h3>Aktivitete Kulturore</h3>
+<h3>Sport</h3>
 <p>
-Koncerte, konkurse artistike
-dhe evente festive.
+Aktivitete sportive dhe kampionate shkollore.
 </p>
 </div>
 
 <div class="card">
 <h3>Projekte Europiane</h3>
 <p>
-Bashkëpunime me shkolla dhe organizata
-ndërkombëtare.
+Bashkëpunime dhe projekte ndërkombëtare.
 </p>
 </div>
 
@@ -660,16 +481,22 @@ ndërkombëtare.
 
 <div class="section-title">
 <h2>Galeria</h2>
-<p>Momente nga jeta shkollore</p>
+<p>Foto reale nga Gjimnazi “Ali Demi”</p>
 </div>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200">
+<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0004.jpg">
 
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200">
+<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0005.jpg">
 
-<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200">
+<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0006.jpg">
+
+<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0007.jpg">
+
+<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0008.jpg">
+
+<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0009.jpg">
 
 </div>
 
@@ -684,27 +511,25 @@ ndërkombëtare.
 <p>Informacionet zyrtare të shkollës</p>
 </div>
 
-<div class="contact-box">
+<div class="contact">
 
-<div class="contact-item">
-<h3>Adresa</h3>
-<p>Bulevardi “Ismail Qemali”, Vlorë, Shqipëri</p>
-</div>
+<p><strong>Emri:</strong> Gjimnazi “Ali Demi”</p>
 
-<div class="contact-item">
-<h3>Telefon</h3>
-<p>+355 33 421 321</p>
-</div>
+<p><strong>Adresa:</strong>
+Bulevardi “Ismail Qemali”, Vlorë, Shqipëri
+</p>
 
-<div class="contact-item">
-<h3>Email</h3>
-<p>gjimnazialidemi1947@gmail.com</p>
-</div>
+<p><strong>Telefon:</strong>
++355 33 421 321
+</p>
 
-<div class="contact-item">
-<h3>Themeluar</h3>
-<p>20 Tetor 1947</p>
-</div>
+<p><strong>Email:</strong>
+gjimnazialidemi1947@gmail.com
+</p>
+
+<p><strong>Themeluar:</strong>
+20 Tetor 1947
+</p>
 
 </div>
 
