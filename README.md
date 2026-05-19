@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gjimnazi “Ali Demi” | Vlorë</title>
@@ -239,19 +238,19 @@ Traditë dhe ekselencë që prej vitit 1947
 
 <div class="menu-box">
 
-<select onchange="goToSection(this.value)">
+<select>
 
-<option value="">MENU</option>
+<option>MENU</option>
 
-<option value="#historiku">Historiku</option>
+<option>Historiku</option>
 
-<option value="#synimi">Synimi</option>
+<option>Synimi</option>
 
-<option value="#drejtuesit">Drejtuesit</option>
+<option>Drejtuesit</option>
 
-<option value="#aktivitetet">Aktivitetet</option>
+<option>Aktivitetet</option>
 
-<option value="#kontakt">Kontakt</option>
+<option>Kontakt</option>
 
 </select>
 
@@ -538,20 +537,6 @@ Të gjitha të drejtat e rezervuara
 </p>
 
 </footer>
-
-<script>
-
-function goToSection(section){
-
-if(section !== ""){
-
-window.location.href = section;
-
-}
-
-}
-
-</script>
 
 </body>
 
