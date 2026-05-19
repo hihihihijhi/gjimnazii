@@ -14,8 +14,8 @@
 <style>
 
 :root{
-    --primary:#0b1f3a;
-    --secondary:#123c73;
+    --primary:#081b33;
+    --secondary:#102d52;
     --gold:#f5c542;
     --white:#ffffff;
     --light:#f4f7fb;
@@ -35,100 +35,78 @@ body{
     color:var(--text);
 }
 
-/* NAVBAR */
+/* HERO */
 
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    background:rgba(11,31,58,0.95);
-    backdrop-filter:blur(10px);
-    z-index:999;
+.landing-page{
+    min-height:100vh;
+    background:linear-gradient(180deg,#081b33,#102d52);
+    padding:40px 20px;
 }
 
-nav{
-    width:90%;
+.landing-content{
+    max-width:900px;
     margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
+    text-align:center;
+    color:white;
 }
 
-.logo{
-    color:white;
-    font-size:26px;
+.landing-content h1{
+    font-size:65px;
     font-weight:700;
+    margin-top:50px;
+}
+
+.landing-content h2{
+    font-size:70px;
+    color:var(--gold);
+    margin-top:-10px;
+}
+
+.landing-content p{
+    font-size:22px;
+    color:#ddd;
+    margin-top:10px;
 }
 
 /* MENU */
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:var(--gold);
-}
-
-/* HERO */
-
-.hero{
-    height:100vh;
-
-    background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('images/foto1.jpg');
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-
-    color:white;
+.menu-box{
+    margin-top:40px;
+    background:white;
     padding:20px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-.hero-content{
-    max-width:900px;
-}
-
-.hero-content h1{
-    font-size:70px;
-    margin-bottom:20px;
-    font-weight:800;
-}
-
-.hero-content p{
-    font-size:24px;
-    line-height:1.8;
-}
-
-.hero-btn{
-    margin-top:35px;
-    padding:16px 38px;
+.menu-box select{
+    width:100%;
+    padding:18px;
     border:none;
-    border-radius:50px;
-    background:var(--gold);
-    font-size:16px;
-    font-weight:700;
+    border-radius:15px;
+    background:#f4f4f4;
+    font-size:22px;
+    font-weight:600;
+    color:#0b1f3a;
+    outline:none;
+    cursor:pointer;
 }
 
-/* SECTIONS */
+/* FOTO */
+
+.main-image{
+    margin-top:50px;
+    background:white;
+    padding:18px;
+    border-radius:25px;
+}
+
+.main-image img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+}
+
+/* SECTION */
 
 section{
     padding:100px 10%;
@@ -213,24 +191,22 @@ footer{
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:768px){
 
-.hero-content h1{
-    font-size:45px;
+.landing-content h1{
+    font-size:42px;
 }
 
-.hero-content p{
+.landing-content h2{
+    font-size:48px;
+}
+
+.landing-content p{
     font-size:18px;
 }
 
-nav{
-    flex-direction:column;
-    gap:20px;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
+.menu-box select{
+    font-size:18px;
 }
 
 }
@@ -241,44 +217,53 @@ nav ul{
 
 <body>
 
-<!-- NAVBAR -->
+<!-- FAQJA E PARË -->
 
-<header>
+<section class="landing-page" id="home">
 
-<nav>
+<div class="landing-content">
 
-<div class="logo">
+<h1>
 Gjimnazi “Ali Demi”
-</div>
+</h1>
 
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#historiku">Historiku</a></li>
-<li><a href="#synimi">Synimi</a></li>
-<li><a href="#drejtuesit">Drejtuesit</a></li>
-<li><a href="#aktivitetet">Aktivitetet</a></li>
-<li><a href="#kontakt">Kontakt</a></li>
-</ul>
-
-</nav>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<h1>Gjimnazi “Ali Demi”</h1>
+<h2>
+Vlorë
+</h2>
 
 <p>
-Traditë, kulturë dhe ekselencë akademike që prej vitit 1947.
+Traditë dhe ekselencë që prej vitit 1947
 </p>
 
-<button class="hero-btn">
-Mirësevini
-</button>
+<!-- MENU -->
+
+<div class="menu-box">
+
+<select onchange="goToSection(this.value)">
+
+<option value="">MENU</option>
+
+<option value="#historiku">Historiku</option>
+
+<option value="#synimi">Synimi</option>
+
+<option value="#drejtuesit">Drejtuesit</option>
+
+<option value="#aktivitetet">Aktivitetet</option>
+
+<option value="#kontakt">Kontakt</option>
+
+</select>
+
+</div>
+
+<!-- FOTO KRYESORE -->
+
+<div class="main-image">
+
+<img src="images/foto1.jpg">
+
+</div>
 
 </div>
 
@@ -554,5 +539,20 @@ Të gjitha të drejtat e rezervuara
 
 </footer>
 
+<script>
+
+function goToSection(section){
+
+if(section !== ""){
+
+window.location.href = section;
+
+}
+
+}
+
+</script>
+
 </body>
+
 </html>
