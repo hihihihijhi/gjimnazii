@@ -3,194 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gjimnazi "Ali Demi" - Vlorë</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Gjimnazi Ali Demi</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f5f7fa;
-    scroll-behavior: smooth;
+body{
+    background:#f5f5f5;
+    color:#333;
 }
 
-/* HEADER */
-header {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1580582932707-520aed937b7b');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+header{
+    background:#003366;
+    color:white;
+    padding:20px;
+    position:sticky;
+    top:0;
 }
 
-header h1 {
-    font-size: 50px;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-header p {
-    font-size: 20px;
-    margin-top: 10px;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
 }
 
-/* NAVBAR */
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(0,0,0,0.7);
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+.hero{
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
 }
 
-nav a:hover {
-    color: #ffd700;
+.hero h1{
+    font-size:60px;
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:10px;
 }
 
-/* SECTIONS */
-section {
-    padding: 60px 20px;
-    text-align: center;
+section{
+    padding:60px 10%;
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #003366;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-/* CARDS */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.gallery img{
+    width:100%;
+    border-radius:10px;
 }
 
-/* GALLERY */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
-.gallery img {
-    width: 33.3%;
-    height: 250px;
-    object-fit: cover;
-    transition: 0.3s;
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    background:#ffcc00;
+    color:black;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+button:hover{
+    background:white;
 }
-
-/* CONTACT */
-.contact p {
-    margin: 10px 0;
-}
-
-/* FOOTER */
-footer {
-    background: #003366;
-    color: white;
-    padding: 20px;
-}
-
 </style>
 </head>
 
 <body>
 
+<header>
 <nav>
-<a href="#home">Kreu</a>
-<a href="#about">Rreth</a>
-<a href="#programs">Programet</a>
-<a href="#gallery">Galeria</a>
-<a href="#contact">Kontakt</a>
-</nav>
+<h2>Gjimnazi Ali Demi</h2>
 
-<header id="home">
-<h1>Gjimnazi "Ali Demi"</h1>
-<p>Vlorë • Arsim • Edukim • Sukses</p>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">Rreth Nesh</a></li>
+<li><a href="#staff">Stafi</a></li>
+<li><a href="#gallery">Galeria</a></li>
+<li><a href="#contact">Kontakt</a></li>
+</ul>
+</nav>
 </header>
 
+<section class="hero" id="home">
+<div>
+<h1>Mirësevini në Gjimnazin Ali Demi</h1>
+<p>Që prej vitit 1947</p>
+<button onclick="showMessage()">Lexo më shumë</button>
+</div>
+</section>
+
 <section id="about">
-<h2>Rreth Nesh</h2>
+<h2>Rreth Shkollës</h2>
+<br>
 <p>
-Gjimnazi “Ali Demi” është një ndër shkollat më të njohura në Vlorë,
-që synon të zhvillojë potencialin maksimal të çdo nxënësi.
+Gjimnazi “Ali Demi” është një nga gjimnazet më të njohura,
+duke ofruar arsim cilësor dhe aktivitete të shumta për nxënësit.
 </p>
 </section>
 
-<section id="programs">
-<h2>Programet</h2>
+<section id="staff">
+<h2>Stafi Ynë</h2>
+<br>
+
 <div class="cards">
+
 <div class="card">
-<h3>Shkenca</h3>
-<p>Matematikë, Fizikë, Kimi</p>
+<h3>Drejtori</h3>
+<p>Emri i Drejtorit</p>
 </div>
 
 <div class="card">
-<h3>Shoqërore</h3>
-<p>Histori, Gjeografi</p>
+<h3>Mësues Matematikë</h3>
+<p>Mësues profesional dhe i kualifikuar.</p>
 </div>
 
 <div class="card">
-<h3>Gjuhë</h3>
-<p>Anglisht, Italisht</p>
+<h3>Mësues Gjuhësh</h3>
+<p>Eksperiencë dhe përkushtim.</p>
 </div>
+
 </div>
 </section>
 
 <section id="gallery">
 <h2>Galeria</h2>
+<br>
+
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238">
-<img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
-<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200">
 </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact">
 <h2>Kontakt</h2>
+<br>
+
 <p>Email: info@alidemi.edu.al</p>
-<p>Telefon: +355 XXX XXX XXX</p>
-<p>Vlorë, Shqipëri</p>
+<p>Telefon: +355 69 000 0000</p>
+<p>Adresa: Vlorë, Shqipëri</p>
 </section>
 
 <footer>
-<p>&copy; 2026 Gjimnazi "Ali Demi"</p>
+<p>© 2026 Gjimnazi Ali Demi - Të gjitha të drejtat e rezervuara</p>
 </footer>
+
+<script>
+function showMessage(){
+    alert("Mirësevini në faqen zyrtare të shkollës!");
+}
+</script>
 
 </body>
 </html>
