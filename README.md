@@ -54,19 +54,12 @@ nav{
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
     color:white;
-    font-size:24px;
+    font-size:26px;
     font-weight:700;
 }
 
-.logo img{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-}
+/* MENU */
 
 nav ul{
     display:flex;
@@ -91,16 +84,18 @@ nav a:hover{
     height:100vh;
 
     background:
-    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0004.jpg');
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('images/foto1.jpg');
 
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
+
     color:white;
     padding:20px;
 }
@@ -158,6 +153,20 @@ section{
     color:#666;
 }
 
+/* HISTORY */
+
+.history{
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.history p{
+    margin-bottom:20px;
+    line-height:1.9;
+}
+
 /* CARDS */
 
 .grid{
@@ -183,41 +192,6 @@ section{
     margin-bottom:15px;
 }
 
-/* HISTORY */
-
-.history{
-    background:white;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.history p{
-    margin-bottom:20px;
-    line-height:1.9;
-}
-
-/* GALLERY */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
-
-.gallery img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:20px;
-    transition:0.4s;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-.gallery img:hover{
-    transform:scale(1.04);
-}
-
 /* CONTACT */
 
 .contact{
@@ -240,6 +214,8 @@ footer{
     text-align:center;
     padding:30px;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -268,16 +244,14 @@ nav ul{
 
 <body>
 
+<!-- NAVBAR -->
+
 <header>
 
 <nav>
 
 <div class="logo">
-
-<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/logo.png">
-
-<div>Gjimnazi “Ali Demi”</div>
-
+Gjimnazi “Ali Demi”
 </div>
 
 <ul>
@@ -286,7 +260,6 @@ nav ul{
 <li><a href="#synimi">Synimi</a></li>
 <li><a href="#drejtuesit">Drejtuesit</a></li>
 <li><a href="#aktivitetet">Aktivitetet</a></li>
-<li><a href="#galeria">Galeria</a></li>
 <li><a href="#kontakt">Kontakt</a></li>
 </ul>
 
@@ -319,8 +292,13 @@ Mirësevini
 <section id="historiku">
 
 <div class="section-title">
+
 <h2>Historiku</h2>
-<p>Historia dhe tradita e shkollës</p>
+
+<p>
+Historia dhe tradita e shkollës
+</p>
+
 </div>
 
 <div class="history">
@@ -362,34 +340,48 @@ me rezultate të larta akademike.
 <section id="synimi">
 
 <div class="section-title">
+
 <h2>Synimi i Shkollës</h2>
-<p>Misioni dhe vizioni</p>
+
+<p>
+Misioni dhe vizioni
+</p>
+
 </div>
 
 <div class="grid">
 
 <div class="card">
+
 <h3>Ekselencë Akademike</h3>
+
 <p>
 Përgatitja e nxënësve me rezultate të larta
 dhe edukim modern.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>Zhvillim Personal</h3>
+
 <p>
 Nxitja e talentit, kreativitetit dhe
 aftësive profesionale.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>Edukimi Qytetar</h3>
+
 <p>
 Formimi i qytetarëve të përgjegjshëm
 dhe aktivë në shoqëri.
 </p>
+
 </div>
 
 </div>
@@ -401,30 +393,47 @@ dhe aktivë në shoqëri.
 <section id="drejtuesit">
 
 <div class="section-title">
+
 <h2>Drejtuesit</h2>
-<p>Stafi drejtues i shkollës</p>
+
+<p>
+Stafi drejtues i shkollës
+</p>
+
 </div>
 
 <div class="grid">
 
 <div class="card">
+
 <h3>Drejtori</h3>
+
 <p>Roland Dervishaj</p>
+
 </div>
 
 <div class="card">
+
 <h3>Nëndrejtor</h3>
+
 <p>Marjana Papavangjeli</p>
+
 </div>
 
 <div class="card">
+
 <h3>Nëndrejtor</h3>
+
 <p>Mirela Spiro</p>
+
 </div>
 
 <div class="card">
+
 <h3>Nëndrejtor</h3>
+
 <p>Kostanca Bregasi</p>
+
 </div>
 
 </div>
@@ -436,67 +445,57 @@ dhe aktivë në shoqëri.
 <section id="aktivitetet">
 
 <div class="section-title">
+
 <h2>Aktivitetet</h2>
-<p>Aktivitete edukative dhe kulturore</p>
+
+<p>
+Aktivitete edukative dhe kulturore
+</p>
+
 </div>
 
 <div class="grid">
 
 <div class="card">
+
 <h3>Olimpiada</h3>
+
 <p>
 Pjesëmarrje në olimpiada kombëtare
 dhe ndërkombëtare.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>Aktivitete Kulturore</h3>
+
 <p>
 Koncerte, konkurse dhe evente artistike.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>Sport</h3>
+
 <p>
 Aktivitete sportive dhe kampionate shkollore.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>Projekte Europiane</h3>
+
 <p>
 Bashkëpunime dhe projekte ndërkombëtare.
 </p>
-</div>
 
 </div>
-
-</section>
-
-<!-- GALERIA -->
-
-<section id="galeria">
-
-<div class="section-title">
-<h2>Galeria</h2>
-<p>Foto reale nga Gjimnazi “Ali Demi”</p>
-</div>
-
-<div class="gallery">
-
-<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0004.jpg">
-
-<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0005.jpg">
-
-<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0006.jpg">
-
-<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0007.jpg">
-
-<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0008.jpg">
-
-<img src="https://gjimnazi-alidemi.edu.al/uploads/1/2/8/7/128775024/published/img-20230905-wa0009.jpg">
 
 </div>
 
@@ -507,33 +506,47 @@ Bashkëpunime dhe projekte ndërkombëtare.
 <section id="kontakt">
 
 <div class="section-title">
+
 <h2>Kontakt</h2>
-<p>Informacionet zyrtare të shkollës</p>
+
+<p>
+Informacionet zyrtare të shkollës
+</p>
+
 </div>
 
 <div class="contact">
 
-<p><strong>Emri:</strong> Gjimnazi “Ali Demi”</p>
+<p>
+<strong>Emri:</strong>
+Gjimnazi “Ali Demi”
+</p>
 
-<p><strong>Adresa:</strong>
+<p>
+<strong>Adresa:</strong>
 Bulevardi “Ismail Qemali”, Vlorë, Shqipëri
 </p>
 
-<p><strong>Telefon:</strong>
-+355 33 421 321
+<p>
+<strong>Telefon:</strong>
++355 XX XXX XXXX
 </p>
 
-<p><strong>Email:</strong>
+<p>
+<strong>Email:</strong>
 gjimnazialidemi1947@gmail.com
 </p>
 
-<p><strong>Themeluar:</strong>
+<p>
+<strong>Themeluar:</strong>
 20 Tetor 1947
 </p>
 
 </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
